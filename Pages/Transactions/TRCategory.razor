@@ -1,0 +1,20 @@
+﻿<tr class="@(Category.Key is "" ? Table.UnHideAndHide[0] : "")" style="background-color: rgba(255, 255, 255, 0.05);">
+    <td>@(Category.Key is "" ? "Create" : Category.Key)</td>
+    <td>@(Category.Key is "" ? "" : Category.Sum(e => e.LastMonth) + " €")</td>
+    <td>@(Category.Key is "" ? "" : Category.Sum(e => e.ThisMonth) + " €")</td>
+    <td></td>
+</tr>
+@foreach (Transaction transaction in Category)
+{
+    <CascadingValue Value="this">
+        <TRTitle Transaction="transaction" />
+    </CascadingValue>
+}
+
+@code {
+    [CascadingParameter] Table Table { get; set; }
+
+    [Parameter] public IGrouping<string, Transaction> Category { get; set; }
+
+    public void Changed() => StateHasChanged();
+}

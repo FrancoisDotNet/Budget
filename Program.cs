@@ -1,16 +1,19 @@
-﻿using Microsoft.AspNetCore.Blazor.Hosting;
+﻿using Blazored.LocalStorage;
+using Microsoft.AspNetCore.Blazor.Hosting;
+using Microsoft.AspNetCore.Components.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Budget
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+        static void Main() =>
+            BlazorWebAssemblyHost.CreateDefaultBuilder().UseBlazorStartup<Startup>().Build().Run();
+    }
 
-        public static IWebAssemblyHostBuilder CreateHostBuilder(string[] args) =>
-            BlazorWebAssemblyHost.CreateDefaultBuilder()
-                .UseBlazorStartup<Startup>();
+    class Startup
+    {
+        public void ConfigureServices(IServiceCollection c) => c.AddBlazoredLocalStorage();
+        public void Configure(IComponentsApplicationBuilder b) => b.AddComponent<App>("body");
     }
 }

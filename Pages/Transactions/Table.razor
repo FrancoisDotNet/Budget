@@ -1,0 +1,65 @@
+﻿<table class="table table-dark table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" class="@UnHideAndHide[0]">Category</th>
+            <th scope="col">@Data</th>
+            <th scope="col">
+                @(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.AddMonths(-1).ToString("MMM")))
+            </th>
+            <th scope="col">
+                @(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMM")))
+            </th>
+            <th scope="col" class="text-right">
+                <button class="@UnHideAndHide[1] btn btn-light oi oi-pencil" @onclick="@Edit" />
+                <div class="@UnHideAndHide[0] btn-group">
+                    <button class="btn btn-danger oi oi-x" @onclick="@Edit" />
+                    <button class="btn btn-success oi oi-check" @onclick="@Save" />
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <CascadingValue Value="this">
+            @foreach (IGrouping<string, Transaction> category in categories)
+            {
+                <TRCategory Category="category" />
+            }
+        </CascadingValue>
+    </tbody>
+</table>
+
+@code {
+        [CascadingParameter(Name="data")] public string Data { get; set; }
+
+        public List<Transaction> Transactions { get; set; }
+        public string[] UnHideAndHide { get; set; } = { "d-none", "" };
+
+    IEnumerable<IGrouping<string, Transaction>> categories;
+
+    void Edit()
+    {
+        UnHideAndHide[0] = UnHideAndHide[0] == "" ? "d-none" : "";
+        UnHideAndHide[1] = UnHideAndHide[1] == "" ? "d-none" : "";
+    }
+
+    void Save()
+    {
+        storage.SetItem(Data, Transactions);
+    }
+
+    protected override void OnParametersSet()
+    {
+        List<Transaction> stored = storage.GetItem<List<Transaction>>(Data);
+        Console.WriteLine(stored is null ? "null" : "exist");
+        Transactions = stored is null ? new List<Transaction>() : stored;
+        Transactions.Add(
+            new Transaction() { Category = "", Title = "", LastMonth = 0, ThisMonth = 0, IsDone = false });
+        categories = Transactions.OrderBy(t => t.Category).ThenBy(t => t.Title).GroupBy(t => t.Category);
+    }
+
+    public void Changed()
+    {
+        OnParametersSet();
+        StateHasChanged();
+    }
+}

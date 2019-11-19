@@ -1,3 +1,4 @@
+C:\Users\franc\.nuget\packages\blazored.localstorage\2.1.1\lib\netstandard2.0\Blazored.LocalStorage.dll
 C:\Users\franc\.nuget\packages\microsoft.aspnetcore.authorization\3.1.0-preview2.19528.8\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\franc\.nuget\packages\microsoft.aspnetcore.blazor\3.1.0-preview2.19528.8\lib\netstandard2.0\Microsoft.AspNetCore.Blazor.dll
 C:\Users\franc\.nuget\packages\microsoft.aspnetcore.blazor.httpclient\3.1.0-preview2.19528.8\lib\netstandard2.0\Microsoft.AspNetCore.Blazor.HttpClient.dll

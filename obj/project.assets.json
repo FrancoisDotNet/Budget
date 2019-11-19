@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Blazored.LocalStorage/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.0.0",
+          "Microsoft.AspNetCore.Components.Web": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/3.1.0-preview2.19528.8": {
         "type": "package",
         "dependencies": {
@@ -336,6 +349,18 @@
     }
   },
   "libraries": {
+    "Blazored.LocalStorage/2.1.1": {
+      "sha512": "C3hls1girWezQy2eVRlngB2gx6CzDn0iWgdgSoa7W6pRf4nK6HOI3MtaWmdNCJQ/bniICIHs+CYvaXqmKx/oLw==",
+      "type": "package",
+      "path": "blazored.localstorage/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.localstorage.2.1.1.nupkg.sha512",
+        "blazored.localstorage.nuspec",
+        "lib/netstandard2.0/Blazored.LocalStorage.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/3.1.0-preview2.19528.8": {
       "sha512": "89So+LP2dO0HkceujfNG5gb46pcsPnzeHCTN0g/YsjSa1U/AM07FZCH6IisaFw+G8Ln8G8mpE/LzHnhsx0W3zg==",
       "type": "package",
@@ -1450,6 +1475,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Blazored.LocalStorage >= 2.1.1",
       "Microsoft.AspNetCore.Blazor >= 3.1.0-preview2.19528.8",
       "Microsoft.AspNetCore.Blazor.Build >= 3.1.0-preview2.19528.8",
       "Microsoft.AspNetCore.Blazor.DevServer >= 3.1.0-preview2.19528.8",
@@ -1463,11 +1489,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj",
+      "projectUniqueName": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj",
       "projectName": "Budget",
-      "projectPath": "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj",
+      "projectPath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj",
       "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\obj\\",
+      "outputPath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1494,6 +1520,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "Blazored.LocalStorage": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          },
           "Microsoft.AspNetCore.Blazor": {
             "target": "Package",
             "version": "[3.1.0-preview2.19528.8, )"

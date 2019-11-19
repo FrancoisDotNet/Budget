@@ -1,3 +1,4 @@
+Blazored.LocalStorage.dll
 Microsoft.AspNetCore.Authorization.dll
 Microsoft.AspNetCore.Blazor.dll
 Microsoft.AspNetCore.Blazor.HttpClient.dll
@@ -26,4 +27,3 @@ System.Runtime.CompilerServices.Unsafe.dll
 System.Text.Encodings.Web.dll
 System.Text.Json.dll
 System.Threading.Tasks.Extensions.dll
-Budget.pdb

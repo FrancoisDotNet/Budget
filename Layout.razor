@@ -1,0 +1,14 @@
+@inherits LayoutComponentBase
+
+<nav class="bg-secondary navbar btn-group">
+    @foreach (var link in links)
+    {
+        <NavLink class="btn btn-outline-dark" href="@(link ==  "Home" ? "" : link)"
+                 Match="NavLinkMatch.All">
+            <span class="oi oi-@link"/>
+        </NavLink>
+    }
+</nav>
+<article>@Body</article>
+
+@code   { List<string> links = new List<string> { "home", "thumb-down", "thumb-up" }; }

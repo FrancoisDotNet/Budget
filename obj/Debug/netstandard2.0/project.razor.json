@@ -9,6 +9,462 @@
     "TagHelpers": [
       {
         "Kind": "Components.Component",
+        "Name": "Budget.App",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.App"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.App",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.App",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.Counter",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.Counter"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.Counter",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.Pages.Counter",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.FetchData",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.FetchData"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.FetchData",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.Pages.FetchData",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.Index",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.Index"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.Index",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.Pages.Index",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Shared.NavMenu",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Shared.NavMenu"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Shared.NavMenu",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.Shared.NavMenu",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Shared.MainLayout",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MainLayout",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Shared.MainLayout"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Shared.MainLayout",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.Shared.MainLayout",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Shared.MainLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.ChildContent",
+        "Name": "Budget.Shared.MainLayout.Body",
+        "AssemblyName": "Budget",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "MainLayout",
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Budget.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "Kind": "Components.ChildContent",
+        "Name": "Budget.Shared.MainLayout.Body",
+        "AssemblyName": "Budget",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "Budget.Shared.MainLayout",
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Budget.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Shared.SurveyPrompt",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Shared.SurveyPrompt",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.Shared.SurveyPrompt",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components",
         "Documentation": "\n            <summary>\n            A component that provides a cascading value to all descendant components.\n            </summary>\n        ",

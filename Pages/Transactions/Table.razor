@@ -19,7 +19,7 @@
     </thead>
     <tbody>
         <CascadingValue Value="this">
-            @foreach (IGrouping<string, Transaction> category in categories)
+            @foreach (var category in Categories)
             {
                 <TRCategory Category="category" />
             }
@@ -28,12 +28,11 @@
 </table>
 
 @code {
-        [CascadingParameter(Name="data")] public string Data { get; set; }
+    [CascadingParameter(Name="data")] public string Data { get; set; }
 
-        public List<Transaction> Transactions { get; set; }
-        public string[] UnHideAndHide { get; set; } = { "d-none", "" };
-
-    IEnumerable<IGrouping<string, Transaction>> categories;
+    public List<Transaction> Transactions { get; set; }
+    public IEnumerable<IGrouping<string, Transaction>> Categories { get; set; }
+    public string[] UnHideAndHide { get; set; } = { "d-none", "" };
 
     void Edit()
     {
@@ -53,7 +52,7 @@
         Transactions = stored is null ? new List<Transaction>() : stored;
         Transactions.Add(
             new Transaction() { Category = "", Title = "", LastMonth = 0, ThisMonth = 0, IsDone = false });
-        categories = Transactions.OrderBy(t => t.Category).ThenBy(t => t.Title).GroupBy(t => t.Category);
+        Categories = Transactions.OrderBy(t => t.Category).ThenBy(t => t.Title).GroupBy(t => t.Category);
     }
 
     public void Changed()

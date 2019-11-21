@@ -3,7 +3,7 @@
 <nav class="bg-secondary navbar btn-group">
     @foreach (var link in links)
     {
-        <NavLink class="btn btn-outline-dark" href="@(link ==  "elevator" ? "" : link)"
+        <NavLink class="btn btn-outline-dark" href="@(link ==  "home" ? "" : link)"
                  Match="NavLinkMatch.All">
             <span class="oi oi-@link"/>
         </NavLink>
@@ -11,4 +11,4 @@
 </nav>
 <article>@Body</article>
 
-@code   { List<string> links = new List<string> { "elevator", "caret-bottom", "caret-top" }; }
+@code   { List<string> links = new List<string> { "home", "caret-bottom", "caret-top" }; }

@@ -1,7 +1,18 @@
 ﻿<tr class="was-validated @(Transaction.Category is "" ? Table.UnHideAndHide[0] : "")">
     <td>
         <p class="@Table.UnHideAndHide[1]">@Transaction.Title</p>
-        <input type="text" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.Category" required placeholder="Category"/>
+        <div class="">
+            <input list="sel1" type="text" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.Category" required placeholder="Category"/>
+            <datalist id="sel1">           
+                @foreach (var category in Table.Categories)
+                {
+                    if (category.Key != "")
+                    {
+                        <option>category.Key</option>
+                    }
+                }
+            </datalist>
+        </div>
         <input type="text" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.Title" required placeholder="Title"/>
     </td>
     <td>

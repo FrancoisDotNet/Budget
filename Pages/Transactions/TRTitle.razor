@@ -16,11 +16,11 @@
         <input type="text" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.Title" required placeholder="Title"/>
     </td>
     <td>
-        <p class="@Table.UnHideAndHide[1]">@Transaction.LastMonth €</p>
+        <!-- <p class="@Table.UnHideAndHide[1]">@Transaction.LastMonth €</p> -->
         <input type="number" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.LastMonth" required />
     </td>
     <td>
-        <p class="@Table.UnHideAndHide[1]">@Transaction.ThisMonth €</p>
+        <!-- <p class="@Table.UnHideAndHide[1]">@Transaction.ThisMonth €</p> -->
         <input type="number" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.ThisMonth" required />
     </td>
     <td class="text-right">

@@ -1,5 +1,5 @@
 ﻿<tr class="was-validated @(Transaction.Category is "" ? Table.UnHideAndHide[0] : "")">
-    <td>
+    <td> 
         <p class="@Table.UnHideAndHide[1]">@Transaction.Title</p>
         <div class="">
             <input list="sel1" type="text" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.Category" required placeholder="Category"/>
@@ -15,15 +15,15 @@
         </div>
         <input type="text" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.Title" required placeholder="Title"/>
     </td>
-    <td>
-        <!-- <p class="@Table.UnHideAndHide[1]">@Transaction.LastMonth €</p> -->
-        <input type="number" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.LastMonth" required />
+    <td @onclick="LastMonth">
+        <p class="@lastMonthUnHideAndHide[1]">@Transaction.LastMonth €</p>
+        <input type="number" class="@lastMonthUnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.LastMonth" required />
     </td>
-    <td>
-        <!-- <p class="@Table.UnHideAndHide[1]">@Transaction.ThisMonth €</p> -->
-        <input type="number" class="@Table.UnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.ThisMonth" required />
+    <td @onclick="ThisMonth">
+        <p class="@thisMonthUnHideAndHide[1]">@Transaction.ThisMonth €</p>
+        <input type="number" class="@thisMonthUnHideAndHide[0] form-control bg-transparent text-light" @bind="transaction.ThisMonth" required />
     </td>
-    <td class="text-right">
+    <td class="text-right" contenteditable="false">
         <button @onclick="Done" class="@Table.UnHideAndHide[1] btn btn-@style oi oi-circle-@icon" style="line-height:inherit; position:unset" />
         <button @onclick="Delete" class="@(Transaction.Category is "" ? "d-none" : Table.UnHideAndHide[0]) btn btn-danger oi oi-minus" style="line-height:inherit; position:unset" />
         <button @onclick="Update" class="@(Transaction.Category is "" ? Table.UnHideAndHide[0] : "d-none") btn btn-success oi oi-plus" style="line-height:inherit; position:unset" />
@@ -38,12 +38,25 @@
 
     private Transaction transaction;
     private string style, icon;
+    private string[] lastMonthUnHideAndHide = { "d-none", "" }, thisMonthUnHideAndHide = { "d-none", "" };
 
     protected override void OnParametersSet()
     {
         transaction = Transaction;
         style = Transaction.IsDone ? "info" : "outline-info";
         icon = Transaction.IsDone ? "check" : "x";
+    }
+
+    void LastMonth()
+    {
+        lastMonthUnHideAndHide[0] = lastMonthUnHideAndHide[0] == "" ? "d-none" : "";
+        lastMonthUnHideAndHide[1] = lastMonthUnHideAndHide[1] == "" ? "d-none" : "";
+    }
+    
+    void ThisMonth()
+    {
+        thisMonthUnHideAndHide[0] = thisMonthUnHideAndHide[0] == "" ? "d-none" : "";
+        thisMonthUnHideAndHide[1] = thisMonthUnHideAndHide[1] == "" ? "d-none" : "";
     }
 
     void Done()

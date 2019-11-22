@@ -2,10 +2,10 @@
     <thead class="thead-dark">
         <tr>
             <th scope="col">@Data</th>
-            <th scope="col" class="UnHideAndHide[1]">
+            <th scope="col" class="@UnHideAndHide[1]">
                 @(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.AddMonths(-1).ToString("MMM")))
             </th>
-            <th scope="col" class="UnHideAndHide[1]">
+            <th scope="col" class="@UnHideAndHide[1]">
                 @(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMM")))
             </th>
             <th scope="col" class="text-right">

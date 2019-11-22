@@ -1484,26 +1484,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\franc\\.nuget\\packages\\": {}
+    "C:\\Users\\meyerf\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj",
+      "projectUniqueName": "C:\\Users\\meyerf\\Downloads\\dev\\repos\\Budget\\Budget.csproj",
       "projectName": "Budget",
-      "projectPath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj",
-      "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\obj\\",
+      "projectPath": "C:\\Users\\meyerf\\Downloads\\dev\\repos\\Budget\\Budget.csproj",
+      "packagesPath": "C:\\Users\\meyerf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\meyerf\\Downloads\\dev\\repos\\Budget\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\meyerf\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1559,7 +1557,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview3-014645\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\meyerf\\Downloads\\dev\\dotnet\\sdk\\3.1.100-preview3-014645\\RuntimeIdentifierGraph.json"
       }
     }
   }

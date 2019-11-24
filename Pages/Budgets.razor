@@ -1,0 +1,34 @@
+﻿<nav class="navbar btn-group @Index.Hidden[0]" style="padding:12px">
+    <button @onclick="Edit" class="btn btn-danger oi oi-x"/>
+    <button @onclick="Save" class="btn btn-success oi oi-check"/>
+    <button @onclick="Add" class="btn btn-primary oi oi-plus"/>
+</nav>
+<CascadingValue Value="this"><Table/></CascadingValue>
+
+@code {
+    [Parameter] public string Data { get; set; }
+    [CascadingParameter] Index Index { get; set; }
+
+    public List<Transaction> Transactions { get; set; }
+    
+    public string[] Months { get; set; } = {
+        System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.AddMonths(-1).ToString("MMM")),
+        System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMM")) };
+
+    protected override void OnParametersSet() => Transactions = storage.GetItem<List<Transaction>>(Data) is null ?
+        new List<Transaction>() : storage.GetItem<List<Transaction>>(Data);
+    
+    void Edit() => Index.Hide();
+
+    public void Save()
+    {
+        Transactions.RemoveAll(t => (t.Category == "") || (t.Title == ""));
+        storage.SetItem(Data, Transactions);
+        Edit();
+    }
+    
+    void Add() =>
+        Transactions.Add(new Transaction() { Category = "", Title = "", LastMonth = 0, ThisMonth = 0, IsDone = false });
+
+    public void Changed() => OnParametersSet();
+}

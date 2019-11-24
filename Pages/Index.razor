@@ -1,2 +1,35 @@
-﻿@page "/home"
-@page "/"
+﻿@page "/"
+
+<nav class="bg-secondary navbar btn-group @Hidden[1]" style="padding:12px">
+    <button @onclick="Home" class="btn btn-outline-dark oi oi-home @Active[0]"/>
+    <button @onclick="Expense" class="btn btn-outline-dark oi oi-thumb-down @Active[1]"/>
+    <button @onclick="Income" class="btn btn-outline-dark oi oi-thumb-up @Active[2]"/>
+</nav>
+
+<article class="@(Active[2] == "active" ? "d-none" : "")">
+    <CascadingValue Value="this">
+        <Budgets Data="Expense"/>
+    </CascadingValue>
+</article>
+<article class="@(Active[1] is "active" ? "d-none" : "")">
+    <CascadingValue Value="this">
+        <Budgets Data="Income"/>
+    </CascadingValue>
+</article>
+
+@code {
+    public string[] Hidden { get; set; } = { "d-none", "" };
+    public string[] Active = new string[] {"active", "", ""};
+
+    void Home() => Active = new string[] {"active", "", ""};
+
+    void Expense() => Active = new string[] {"", "active", ""};
+
+    void Income() => Active = new string[] {"", "", "active"};
+
+    public void Hide()
+    {
+        Hidden = Hidden[0] is "" ? new string[] {"d-none", "" } : new string[] {"", "d-none" } ;
+        StateHasChanged();
+    }
+}

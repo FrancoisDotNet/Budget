@@ -1,0 +1,52 @@
+﻿<table class="table table-dark text-center">
+    <thead class="@Index.Hidden[1] @(Index.Active[0] == "active" && Budgets.Data == "Income" ? "d-none" : "")" style="background-color: rgba(255, 255, 255, 0.05)">
+        <tr>
+            <th scope="col" style="width:33.33%;padding-right:0">
+                <button @onclick="Edit" class="btn btn-light btn-block oi oi-pencil @(Index.Active[0] == "active" ? "d-none" : "")"/>
+                <button class="btn btn-light btn-block oi oi-cog @(Index.Active[0] == "active" ? "" : "d-none")"/>
+            </th>
+            <th scope="col" class="" style="width:33.33%">@Budgets.Months[0]</th>
+            <th scope="col" class="@Index.Hidden[1]" style="width:30%">@Budgets.Months[1]</th>
+            <th scope="col" class="@Index.Hidden[1]" style="width:3,33%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="@Index.Hidden[1] @(Index.Active[0] == "active" && Budgets.Data == "Expense" ? "btn-primary" : "d-none")" style="font-weight: bold">
+            <td class="text-left">Total</td>
+            <td>@((storage.GetItem<List<Transaction>>("Income") == null ? 0 : (storage.GetItem<List<Transaction>>("Income")).Sum(e => e.LastMonth)) - (Budgets.Transactions.Sum(e => e.LastMonth)) + " €")</td>
+            <td>@((storage.GetItem<List<Transaction>>("Income") == null ? 0 : (storage.GetItem<List<Transaction>>("Income")).Sum(e => e.ThisMonth)) - (Budgets.Transactions.Sum(e => e.ThisMonth)) + " €")</td>
+            <td></td>
+        </tr>
+        <tr class="@Index.Hidden[1] @(Index.Active[0] == "active" && Budgets.Data == "Expense" ? "btn-danger" : Index.Active[0] == "active" ? "btn-success" : "d-none")" style="font-weight: bold">
+            <td class="text-left">@Budgets.Data</td>
+            <td>@(Budgets.Transactions.Sum(e => e.LastMonth) + " €")</td>
+            <td>@(Budgets.Transactions.Sum(e => e.ThisMonth) + " €")</td>
+            <td></td>
+        </tr>
+        @foreach (var category in Categories)
+        {
+            <tr class="@Index.Hidden[1] @(Index.Active[0] == "active" ? (Budgets.Data == "Expense" ? "alert-danger" : "alert-success") : "")" style="font-weight: bold">
+                <td class="text-left">@category.Key</td>
+                <td>@(category.Sum(e => e.LastMonth) + " €")</td>
+                <td >@(category.Sum(e => e.ThisMonth) + " €")</td>
+                <td></td>
+            </tr>
+            @foreach (var transaction in category)
+            {
+                <CascadingValue Value="this"><TR Transaction="transaction" /></CascadingValue>
+            }
+        }
+    </tbody>
+</table>
+
+@code {
+    [CascadingParameter] Budgets Budgets { get; set; }
+    [CascadingParameter] Index Index { get; set; }
+
+    public IEnumerable<IGrouping<string, Transaction>> Categories { get; set; }
+    
+    protected override void OnParametersSet() =>
+        Categories = Budgets.Transactions.OrderBy(t => t.Category).ThenBy(t => t.Title).GroupBy(t => t.Category);
+    
+    void Edit() => Index.Hide();
+}

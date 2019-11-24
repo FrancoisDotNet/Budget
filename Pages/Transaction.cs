@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Budget.Pages.Transactions
+﻿namespace Budget.Pages
 {
     public class Transaction
     {

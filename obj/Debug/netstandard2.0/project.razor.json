@@ -9,6 +9,55 @@
     "TagHelpers": [
       {
         "Kind": "Components.Component",
+        "Name": "Budget.App",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.App"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.App",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.App",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
         "Name": "Budget.Pages.Transactions.Expense",
         "AssemblyName": "Budget",
         "Documentation": null,
@@ -58,104 +107,6 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "Budget.Pages.Transactions.Income",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Income",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Pages.Transactions.Income"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "Budget.Pages.Transactions.Income",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Budget.Pages.Transactions.Income",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Pages.Transactions.Income",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "Budget.Pages.Transactions.Table",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Table",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Pages.Transactions.Table"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "Budget.Pages.Transactions.Table",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Budget.Pages.Transactions.Table",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Pages.Transactions.Table",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
         "Name": "Budget.Pages.Transactions.TRCategory",
         "AssemblyName": "Budget",
         "Documentation": null,
@@ -174,7 +125,7 @@
           {
             "Kind": "Components.Component",
             "Name": "Category",
-            "TypeName": "System.Linq.IGrouping<System.String, Budget.Pages.Transactions.Transaction>",
+            "TypeName": "System.Linq.IGrouping<System.String, Budget.Pages.Transaction>",
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
@@ -213,7 +164,7 @@
           {
             "Kind": "Components.Component",
             "Name": "Category",
-            "TypeName": "System.Linq.IGrouping<System.String, Budget.Pages.Transactions.Transaction>",
+            "TypeName": "System.Linq.IGrouping<System.String, Budget.Pages.Transaction>",
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
@@ -253,7 +204,7 @@
           {
             "Kind": "Components.Component",
             "Name": "Transaction",
-            "TypeName": "Budget.Pages.Transactions.Transaction",
+            "TypeName": "Budget.Pages.Transaction",
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
@@ -292,7 +243,7 @@
           {
             "Kind": "Components.Component",
             "Name": "Transaction",
-            "TypeName": "Budget.Pages.Transactions.Transaction",
+            "TypeName": "Budget.Pages.Transaction",
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
@@ -309,6 +260,85 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Budget.Pages.Transactions.TRTitle",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.Transactions.Table",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Table",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Data",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Data"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.Transactions.Table"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.Transactions.Table",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.Pages.Transactions.Table",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Data",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Data"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.Transactions.Table",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -363,14 +393,14 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "Budget.App",
+        "Name": "Budget.Pages.Table",
         "AssemblyName": "Budget",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App",
+            "TagName": "Table",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -382,19 +412,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.App"
+          "Common.TypeName": "Budget.Pages.Table"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "Budget.App",
+        "Name": "Budget.Pages.Table",
         "AssemblyName": "Budget",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Budget.App",
+            "TagName": "Budget.Pages.Table",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -406,20 +436,20 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.App",
+          "Common.TypeName": "Budget.Pages.Table",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "Budget.Layout",
+        "Name": "Budget.Pages.TR",
         "AssemblyName": "Budget",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Layout",
+            "TagName": "TR",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -429,16 +459,15 @@
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Name": "Transaction",
+            "TypeName": "Budget.Pages.Transaction",
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Documentation": null,
             "Diagnostics": [],
             "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
+              "Common.PropertyName": "Transaction"
             },
             "BoundAttributeParameters": []
           }
@@ -447,19 +476,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Layout"
+          "Common.TypeName": "Budget.Pages.TR"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "Budget.Layout",
+        "Name": "Budget.Pages.TR",
         "AssemblyName": "Budget",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Budget.Layout",
+            "TagName": "Budget.Pages.TR",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -469,16 +498,15 @@
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Name": "Transaction",
+            "TypeName": "Budget.Pages.Transaction",
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Documentation": null,
             "Diagnostics": [],
             "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
+              "Common.PropertyName": "Transaction"
             },
             "BoundAttributeParameters": []
           }
@@ -487,21 +515,21 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Layout",
+          "Common.TypeName": "Budget.Pages.TR",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "Kind": "Components.ChildContent",
-        "Name": "Budget.Layout.Body",
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.TBody",
         "AssemblyName": "Budget",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Body",
-            "ParentTag": "Layout",
+            "TagName": "TBody",
+            "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
             "Diagnostics": []
@@ -511,22 +539,21 @@
         "AllowedChildTags": [],
         "Diagnostics": [],
         "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "Budget.Layout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent"
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.TBody"
         }
       },
       {
-        "Kind": "Components.ChildContent",
-        "Name": "Budget.Layout.Body",
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.TBody",
         "AssemblyName": "Budget",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Body",
-            "ParentTag": "Budget.Layout",
+            "TagName": "Budget.Pages.TBody",
+            "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
             "Diagnostics": []
@@ -536,9 +563,87 @@
         "AllowedChildTags": [],
         "Diagnostics": [],
         "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "Budget.Layout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent",
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.TBody",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.Budgets",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budgets",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Data",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Data"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.Budgets"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "Budget.Pages.Budgets",
+        "AssemblyName": "Budget",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Budget.Pages.Budgets",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Data",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Data"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Budget.Pages.Budgets",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16585,23 +16690,13 @@
   "RootNamespace": "Budget",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Pages\\Transactions\\Expense.razor",
-      "TargetPath": "Pages\\Transactions\\Expense.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Pages\\Transactions\\TRTitle.razor",
-      "TargetPath": "Pages\\Transactions\\TRTitle.razor",
-      "FileKind": "component"
-    },
-    {
       "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\App.razor",
       "TargetPath": "App.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Pages\\Transactions\\Table.razor",
-      "TargetPath": "Pages\\Transactions\\Table.razor",
+      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Pages\\Budgets.razor",
+      "TargetPath": "Pages\\Budgets.razor",
       "FileKind": "component"
     },
     {
@@ -16610,23 +16705,18 @@
       "FileKind": "componentImport"
     },
     {
-      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Pages\\Transactions\\Income.razor",
-      "TargetPath": "Pages\\Transactions\\Income.razor",
+      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Pages\\TR.razor",
+      "TargetPath": "Pages\\TR.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Layout.razor",
-      "TargetPath": "Layout.razor",
+      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Pages\\Table.razor",
+      "TargetPath": "Pages\\Table.razor",
       "FileKind": "component"
     },
     {
       "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Pages\\Index.razor",
       "TargetPath": "Pages\\Index.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Pages\\Transactions\\TRCategory.razor",
-      "TargetPath": "Pages\\Transactions\\TRCategory.razor",
       "FileKind": "component"
     }
   ],

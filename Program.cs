@@ -7,8 +7,7 @@ namespace Budget
 {
     class Program
     {
-        static void Main() =>
-            BlazorWebAssemblyHost.CreateDefaultBuilder().UseBlazorStartup<Startup>().Build().Run();
+        static void Main() => BlazorWebAssemblyHost.CreateDefaultBuilder().UseBlazorStartup<Startup>().Build().Run();
     }
 
     class Startup

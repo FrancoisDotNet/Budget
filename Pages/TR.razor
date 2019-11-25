@@ -17,12 +17,6 @@
             <div class="input-group-prepend mb-3" style="margin-top:12px;width:33.33%">
                 <span class="input-group-text text-left" style="width:100%">Title</span>
             </div>
-            <datalist id="titles">
-                @foreach (var transaction in Budgets.Transactions)
-                {
-                    <option value="@transaction.Title"/>
-                }
-            </datalist>
             <input list="titles" type="text" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" class="form-control bg-transparent text-light" style="margin-top:12px" @bind="transaction.Title" required placeholder="Title"/>
         </div>
         <div class="input-group">
@@ -43,11 +37,8 @@
         </div>
     </td>
     <td class="@Index.Hidden[1]">@Transaction.LastMonth €</td>
-    <td class="@Index.Hidden[1]">
-        @Transaction.ThisMonth €    
-        
-    </td>
-    <td class="@Index.Hidden[1]"><span class="oi btn-outline-info oi-@icon"/></td>
+    <td class="@Index.Hidden[1]">@Transaction.ThisMonth €</td>
+    <td class="@Index.Hidden[1]"><span class="btn-outline-info oi oi-media-record @(style == "info" ? "" : "d-none")"/></td>
 </tr>
 
 @code {
@@ -58,20 +49,18 @@
     [Parameter] public Transaction Transaction { get; set; }
 
     private Transaction transaction;
-    private string style, icon, active;
+    private string style, active;
 
     protected override void OnParametersSet()
     {
         transaction = Transaction;
         style = Transaction.IsDone ? "info" : "outline-info";
-        icon = Transaction.IsDone ? "media-record" : "";
         active = "";
     }
 
     void Done()
     {
-        style = style == "outline-info" ? "info" : "outline-info";
-        icon = icon == "" ? "media-record" : "";
+        style = style == "info" ? "outline-info" : "info";
         Transaction.IsDone = !Transaction.IsDone;
     }
 

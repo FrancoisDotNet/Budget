@@ -1,0 +1,20 @@
+<p class="text-light">Type,Category,Title,LastMonth,ThisMonth,IsDone</p>
+@foreach (var transaction in Budgets.Transactions)
+{
+    <p class="text-light">Expense,@transaction.Category,@transaction.Title,@transaction.LastMonth,@transaction.ThisMonth,@transaction.IsDone</p>
+}
+@if (income != null)
+{
+    @foreach (var transaction in income)
+    {
+        <p class="text-light">Income,@transaction.Category,@transaction.Title,@transaction.LastMonth,@transaction.ThisMonth,@transaction.IsDone</p>
+    }
+}
+
+@code {
+    [CascadingParameter] Budgets Budgets { get; set; }
+
+    List<Transaction> income;
+    
+    protected override void OnParametersSet() => income = storage.GetItem<List<Transaction>>("Income");
+}

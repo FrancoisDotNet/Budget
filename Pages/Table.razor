@@ -3,14 +3,14 @@
         <tr>
             <th scope="col" style="width:33.33%;padding-right:0">
                 <button @onclick="Edit" class="btn btn-light btn-block oi oi-pencil @(Index.Active[0] == "active" ? "d-none" : "")"/>
-                <button class="btn btn-light btn-block oi oi-cog @(Index.Active[0] == "active" ? "" : "d-none")"/>
+                <button @onclick="Settings" class="btn btn-light btn-block oi oi-cog @(Index.Active[0] == "active" ? "" : "d-none")"/>
             </th>
             <th scope="col" class="" style="width:33.33%">@Budgets.Months[0]</th>
             <th scope="col" class="@Index.Hidden[1]" style="width:30%">@Budgets.Months[1]</th>
             <th scope="col" class="@Index.Hidden[1]" style="width:3,33%"></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="@(settings ? "d-none" : "")">
         <tr class="@Index.Hidden[1] @(Index.Active[0] == "active" && Budgets.Data == "Expense" ? "btn-primary" : "d-none")" style="font-weight: bold">
             <td class="text-left">Total</td>
             <td>@((storage.GetItem<List<Transaction>>("Income") == null ? 0 : (storage.GetItem<List<Transaction>>("Income")).Sum(e => e.LastMonth)) - (Budgets.Transactions.Sum(e => e.LastMonth)) + " €")</td>
@@ -39,14 +39,24 @@
     </tbody>
 </table>
 
+<div class="@(settings ? "" : "d-none")">
+<CascadingValue Value="this"><Settings/></CascadingValue>
+</div>
+
 @code {
     [CascadingParameter] Budgets Budgets { get; set; }
     [CascadingParameter] Index Index { get; set; }
 
     public IEnumerable<IGrouping<string, Transaction>> Categories { get; set; }
+    bool settings = false;
     
     protected override void OnParametersSet() =>
         Categories = Budgets.Transactions.OrderBy(t => t.Category).ThenBy(t => t.Title).GroupBy(t => t.Category);
+    
+    void Settings ()
+    {
+        settings = !settings;
+    }
     
     void Edit() => Index.Hide();
 }

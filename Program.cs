@@ -13,6 +13,6 @@ namespace Budget
     class Startup
     {
         public void ConfigureServices(IServiceCollection c) => c.AddBlazoredLocalStorage();
-        public void Configure(IComponentsApplicationBuilder b) => b.AddComponent<App>("body");
+        public void Configure(IComponentsApplicationBuilder b) => b.AddComponent<Pages.Index>("body");
     }
 }

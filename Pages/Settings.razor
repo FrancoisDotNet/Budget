@@ -1,20 +1,11 @@
-<p class="text-light">Type,Category,Title,LastMonth,ThisMonth,IsDone</p>
-@foreach (var transaction in Budgets.Transactions)
+<span>IsIncome,Category,Title,LastMonth,ThisMonth,IsDone <br/></span>
+@foreach (var transaction in Index.Transactions)
 {
-    <p class="text-light">Expense,@transaction.Category,@transaction.Title,@transaction.LastMonth,@transaction.ThisMonth,@transaction.IsDone</p>
-}
-@if (income != null)
-{
-    @foreach (var transaction in income)
-    {
-        <p class="text-light">Income,@transaction.Category,@transaction.Title,@transaction.LastMonth,@transaction.ThisMonth,@transaction.IsDone</p>
-    }
+    <span>@transaction.IsIncome,@transaction.Category,@transaction.Title,@transaction.LastMonth,@transaction.ThisMonth,@transaction.IsDone<br/></span>
 }
 
-@code {
-    [CascadingParameter] Budgets Budgets { get; set; }
+<div class="form-group">
+  <textarea class="form-control" @bind="Index.Import"></textarea>
+</div>
 
-    List<Transaction> income;
-    
-    protected override void OnParametersSet() => income = storage.GetItem<List<Transaction>>("Income");
-}
+@code { [CascadingParameter] Index Index { get; set; } }

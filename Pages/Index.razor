@@ -1,35 +1,79 @@
-﻿@page "/"
+@inject Blazored.LocalStorage.ISyncLocalStorageService storage
+@page "/"
 
-<nav class="bg-secondary navbar btn-group @Hidden[1]" style="padding:12px">
-    <button @onclick="Home" class="btn btn-outline-dark oi oi-home @Active[0]"/>
-    <button @onclick="Expense" class="btn btn-outline-dark oi oi-thumb-down @Active[1]"/>
-    <button @onclick="Income" class="btn btn-outline-dark oi oi-thumb-up @Active[2]"/>
+<nav class="navbar btn-group @Hidden[0]" style="padding:12px">
+    <button @onclick="Hide" class="btn btn-danger oi oi-x"/>
+    <button @onclick="Save" class="btn btn-success oi oi-check"/>
+    <button @onclick="Add" class="btn btn-primary oi oi-plus @HiddenSettings[1]"/>
+    <button @onclick="Settings" class="btn btn-secondary oi oi-transfer @HiddenSettings[1]"/>
 </nav>
-
-<article class="@(Active[2] == "active" ? "d-none" : "")">
-    <CascadingValue Value="this">
-        <Budgets Data="Expense"/>
-    </CascadingValue>
-</article>
-<article class="@(Active[1] is "active" ? "d-none" : "")">
-    <CascadingValue Value="this">
-        <Budgets Data="Income"/>
-    </CascadingValue>
-</article>
+<table class="table table-dark text-center @HiddenSettings[1]">
+    <thead class="@Hidden[1]">
+        <tr>
+            <th scope="col" style="width:33.33%;padding-right:0">
+                <button @onclick="Hide" class="btn btn-light btn-block oi oi-pencil"/>
+            </th>
+            <th scope="col" style="width:33.33%">@Months[0]</th>
+            <th scope="col" style="width:30%">@Months[1]</th>
+            <th scope="col" style="width:3,33%"></th>
+        </tr>
+    </thead>
+    <CascadingValue Value="this"><TBody/></CascadingValue>
+</table>
+<div class="text-left @HiddenSettings[0]">
+    <CascadingValue Value="this"><Settings/></CascadingValue>
+</div>
 
 @code {
+    public string Import { get; set; }
     public string[] Hidden { get; set; } = { "d-none", "" };
-    public string[] Active = new string[] {"active", "", ""};
+    public List<Transaction> Transactions { get; set; }
+    public string[] Months { get; set; } = {
+        System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.AddMonths(-1).ToString("MMM")),
+        System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMM")) };
 
-    void Home() => Active = new string[] {"active", "", ""};
+    string[] HiddenSettings = { "d-none", "" } ;
 
-    void Expense() => Active = new string[] {"", "active", ""};
+    protected override void OnInitialized() => Transactions = storage.GetItem<List<Transaction>>("transactions") is null ?
+        new List<Transaction>() : storage.GetItem<List<Transaction>>("transactions");
 
-    void Income() => Active = new string[] {"", "", "active"};
+    public void Save()
+    {
+        Transactions.RemoveAll(t => (t.Category == "") || (t.Title == ""));
+
+        if (Import != null)
+        {
+            Transactions = new List<Transaction>();
+
+            foreach(string line in Import.Split(new char[] {'\n'}))
+            {
+                string[] words = line.Split(',');
+                bool isIncome, isDone;
+                int lastMonth, thisMonth;
+
+                bool.TryParse(words[0], out isIncome);
+                int.TryParse(words[3], out lastMonth);
+                int.TryParse(words[4], out thisMonth);
+                bool.TryParse(words[5], out isDone);
+
+                Transactions.Add(new Transaction() { IsIncome = isIncome, Category = words[1], Title = words[2],
+                    LastMonth = lastMonth, ThisMonth = thisMonth, IsDone = isDone });
+            }
+        }
+        Import = null;
+        storage.SetItem("transactions", Transactions);
+        Hide();
+    }
+    
+    void Add() => Transactions.Add(
+        new Transaction() { IsIncome = false, Category = "", Title = "", LastMonth = 0, ThisMonth = 0, IsDone = false });
 
     public void Hide()
     {
         Hidden = Hidden[0] is "" ? new string[] {"d-none", "" } : new string[] {"", "d-none" } ;
+        HiddenSettings = new string[] {"d-none", "" };
         StateHasChanged();
     }
+
+    void Settings() => HiddenSettings = new string[] {"", "d-none" };
 }

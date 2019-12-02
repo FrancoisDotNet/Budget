@@ -2,6 +2,7 @@
 {
     public class Transaction
     {
+        public bool IsIncome { get; set; }
         public string Category { get; set; }
         public string Title { get; set; }
         public int LastMonth { get; set; }

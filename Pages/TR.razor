@@ -1,6 +1,6 @@
 ﻿<tr class="was-validated text-dark @(transaction.IsIncome ? "alert-success" : "alert-danger")">
-    <td class="@Index.Hidden[1] text-left">@Transaction.Title</td>
-    <td class="@Index.Hidden[0]">
+    <td class="@Body.Hidden[1] text-left">@Transaction.Title</td>
+    <td class="@Body.Hidden[0]">
         <div class="btn-group d-flex" style="margin-bottom:24px">
             <button @onclick="IsIncome" class="btn btn-success oi oi-thumb-up @(transaction.IsIncome ? "active" : "")" style="line-height:inherit; position:unset"/>
             <button @onclick="IsIncome" class="btn btn-danger oi oi-thumb-down @(transaction.IsIncome ? "" : "active")" style="line-height:inherit; position:unset"/>
@@ -25,29 +25,29 @@
         </div>
         <div class="input-group">
             <div class="input-group-prepend mb-3 text-dark" style="margin-top:12px;width:33.33%">
-                <span class="input-group-text text-left" style="width:100%">@Index.Months[0] (€)</span>
+                <span class="input-group-text text-left" style="width:100%">@Body.Months[0] (€)</span>
             </div>
-            <input type="number" class="form-control bg-transparent text-light" style="margin-top:12px" @bind="transaction.LastMonth" required /> 
+            <input type="number" step="any" class="form-control bg-transparent text-light" style="margin-top:12px" @bind="transaction.LastMonth" required /> 
         </div>
         <div class="input-group">
             <div class="input-group-prepend mb-3" style="margin-top:12px;width:33.33%">
-                <span class="input-group-text" style="width:100%">@Index.Months[1] (€)</span>
+                <span class="input-group-text" style="width:100%">@Body.Months[1] (€)</span>
             </div>
-            <input type="number" class="form-control bg-transparent text-light" style="margin-top:12px" @bind="transaction.ThisMonth" required />
+            <input type="number" step="any" class="form-control bg-transparent text-light" style="margin-top:12px" @bind="transaction.ThisMonth" required />
         </div>
         <div class="btn-group d-flex" style="margin-top:12px">
-            <button @onclick="Delete" class="@Index.Hidden[0] btn btn-outline-danger oi oi-minus @active" style="line-height:inherit; position:unset" />
-            <button @onclick="Done" class="@Index.Hidden[0] btn btn-@style oi oi-media-record" style="line-height:inherit; position:unset" />
+            <button @onclick="Delete" class="@Body.Hidden[0] btn btn-outline-danger oi oi-minus @active" style="line-height:inherit; position:unset" />
+            <button @onclick="Done" class="@Body.Hidden[0] btn btn-@style oi oi-media-record" style="line-height:inherit; position:unset" />
         </div>
     </td>
-    <td class="@Index.Hidden[1]">@Transaction.LastMonth €</td>
-    <td class="@Index.Hidden[1]">@Transaction.ThisMonth €</td>
-    <td class="@Index.Hidden[1]"><span class="btn-outline-info oi oi-media-record @(style == "info" ? "" : "d-none")"/></td>
+    <td class="@Body.Hidden[1]">@Transaction.LastMonth €</td>
+    <td class="@Body.Hidden[1]">@Transaction.ThisMonth €</td>
+    <td class="@Body.Hidden[1]"><span class="btn-outline-info oi oi-media-record @(style == "info" ? "" : "d-none")"/></td>
 </tr>
 
 @code {
     
-    [CascadingParameter] Index Index { get; set; }
+    [CascadingParameter] Body Body { get; set; }
     [CascadingParameter] TBody TBody { get; set; }
 
     [Parameter] public Transaction Transaction { get; set; }
@@ -77,7 +77,7 @@
     void Delete()
     {
         active = "active";
-        Index.Transactions.Remove(Index.Transactions.Find(t => (t.Category == Transaction.Category) &&
+        Body.Transactions.Remove(Body.Transactions.Find(t => (t.Category == Transaction.Category) &&
             (t.Title == Transaction.Title) &&
             (t.LastMonth == Transaction.LastMonth) &&
             (t.ThisMonth == Transaction.ThisMonth)));

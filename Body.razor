@@ -1,0 +1,69 @@
+@inject Blazored.LocalStorage.ISyncLocalStorageService storage
+@page "/"
+
+<nav class="navbar btn-group @Hidden[0]" style="padding:12px">
+    <button @onclick="Hide" class="btn btn-danger oi oi-x"/>
+    <button @onclick="Save" class="btn btn-success oi oi-check"/>
+    <button @onclick="Add" class="btn btn-primary oi oi-plus @(isTransfer ? "d-none" : "")"/>
+    <button @onclick="Transfer" class="btn btn-secondary oi oi-transfer @(isTransfer ? "d-none" : "")"/>
+</nav>
+<table class="table table-dark text-center @(isTransfer ? "d-none" : "")">
+    <thead class="@Hidden[1]">
+        <tr>
+            <th scope="col" style="width:33.33%;padding-right:0"><button @onclick="Hide" class="btn btn-light btn-block oi oi-pencil"/></th>
+            <th scope="col" style="width:33.33%">@Months[0]</th>
+            <th scope="col" style="width:30%">@Months[1]</th>
+            <th scope="col" style="width:3,33%"></th>
+        </tr>
+    </thead>
+    <CascadingValue Value="this"><TBody/></CascadingValue>
+</table>
+<textarea class="form-control @(isTransfer ? "" : "d-none")" style="margin:12px" @bind="transfer"/>
+
+@code {
+    public string[] Hidden { get; set; } = { "d-none", "" };
+    public List<Transaction> Transactions { get; set; }
+    public string[] Months { get; set; } = {
+        System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.AddMonths(-1).ToString("MMM")),
+        System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMM")) }; 
+    string transfer;
+    bool isTransfer = false;
+
+    protected override void OnInitialized() => Transactions = storage.GetItem<List<Transaction>>("transactions") is null ? new List<Transaction>() : storage.GetItem<List<Transaction>>("transactions");
+    void Save()
+    {
+        Transactions.RemoveAll(t => (t.Category == "") || (t.Title == ""));
+        
+        if (isTransfer)
+        {   
+            Transactions = new List<Transaction>();
+
+            foreach(string line in (transfer.Split(new char[] {'\n'})).Skip(1))
+            {
+                string[] words = line.Split(',');
+                Transactions.Add(new Transaction() { IsIncome = bool.Parse(words[0]), Category = words[1], Title = words[2], LastMonth = float.Parse(words[3], new System.Globalization.CultureInfo("en-US")), ThisMonth = float.Parse(words[4], new System.Globalization.CultureInfo("en-US")), IsDone = bool.Parse(words[5]) });             
+            }
+        }
+        storage.SetItem("transactions", Transactions);
+        Hide();     
+    }
+    
+    void Add() => Transactions.Add(new Transaction() { IsIncome = false, Category = "", Title = "", LastMonth = 0, ThisMonth = 0, IsDone = false });
+
+    void Hide()
+    {
+        Hidden = Hidden[0] is "" ? new string[] {"d-none", "" } : new string[] {"", "d-none" } ;
+        isTransfer = false;
+        OnInitialized();
+    }
+
+    void Transfer()
+    {
+        isTransfer = true;
+        transfer = "IsIncome,Category,Title,LastMonth,ThisMonth,IsDone";
+        foreach (var t in Transactions)
+        {
+            transfer += "\n" + t.IsIncome + "," + t.Category + "," + t.Title + "," + t.LastMonth.ToString(new System.Globalization.CultureInfo("en-US")) + "," + t.ThisMonth.ToString(new System.Globalization.CultureInfo("en-US")) + "," + t.IsDone;
+        }
+    }
+}

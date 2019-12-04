@@ -63,12 +63,10 @@ C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Budget.csprojAssem
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\staticwebassets\Budget.StaticWebAssets.Manifest.cache
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\staticwebassets\Budget.StaticWebAssets.xml
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Budget.RazorComponent.input.cache
-C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\Budget.dll
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Budget.TagHelpers.input.cache
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Budget.TagHelpers.output.cache
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Budget.RazorCoreGenerate.cache
-C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\Pages\Index.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Budget.AssemblyInfoInputs.cache
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Budget.AssemblyInfo.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Budget.RazorTargetAssemblyInfo.cache
@@ -120,7 +118,7 @@ C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\P
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\Pages\TR.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\_Imports.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\_Imports.razor.g.cs
-C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\Pages\Settings.razor.g.cs
-C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\Pages\Settings.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\Pages\TBody.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\Pages\TBody.razor.g.cs
+C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\Body.razor.g.cs
+C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\Body.razor.g.cs

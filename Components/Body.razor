@@ -1,0 +1,73 @@
+@page "/"
+
+<table class="table table-dark text-right">
+    <thead>
+        <tr>
+            <th scope="col" class="@(IsEdit ? IsTransfer ? "" : "d-none" : "")">
+                <div class="btn-group btn-block @(IsQuickEdit ? "d-none" : IsTransfer ? "d-none" : "")">
+                    <button @onclick="QuickEdit" class="btn btn-light oi oi-pencil" />
+                    <button @onclick="Edit" class="btn btn-light oi oi-menu"/>
+                </div>
+                <div class="btn-group btn-block @(IsQuickEdit ? "" : IsTransfer ? "" : "d-none")">
+                    <button @onclick="Cancel" class="btn btn-danger oi oi-x"/>
+                    <button @onclick="Save" class="btn btn-success oi oi-check"/>
+                </div>
+            </th>
+            <th scope="col" class="btn-group btn-block @(IsEdit ? IsTransfer ? "d-none" : "" : "d-none")">
+                <button @onclick="Cancel" class="btn btn-danger oi oi-x"/>
+                <button @onclick="Save" class="btn btn-success oi oi-check"/>
+                <button @onclick="Add" class="btn btn-primary oi oi-plus"/>
+                <button @onclick="Transfer" class="btn btn-secondary oi oi-transfer"/>
+            </th>
+            <th scope="col" class="@(IsEdit ? "d-none" : "")" style="width:33.33%">
+                @CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.AddMonths(-1).ToString("MMM")) (€)
+            </th>
+            <th scope="col" class="@(IsEdit ? "d-none" : "")" style="width:33.33%">
+                @CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMM")) (€)
+            </th>
+        </tr>
+    </thead>
+    <CascadingValue Value="this">
+        <TBody/>
+    </CascadingValue>
+    <tbody class="@(IsTransfer ? "" : "d-none")">
+        <textarea class="form-control" @bind="transfer"/>
+    </tbody>
+</table>
+
+@code {
+    public Transactions Budget { get; set; }
+    public bool IsEdit { get; set; } = false;
+    public bool IsQuickEdit { get; set; } = false;
+    public bool IsTransfer { get; set; } = false;
+    string transfer;
+
+    protected override void OnInitialized() => Budget = new Transactions(localStorageService, "budget");
+    
+    void Cancel()
+    {
+        IsEdit = false;
+        IsQuickEdit = false;
+        IsTransfer = false;
+        OnInitialized();
+    } 
+    
+    void Save()
+    {
+        Budget = IsTransfer ? Budget.Import(transfer) : Budget;
+        Budget.Save(localStorageService, "budget");
+        Cancel();
+    }
+    
+    void Add() => Budget.List.Add(new Transaction());
+
+    void Transfer()
+    {
+        IsTransfer = true;
+        transfer = Budget.Export();
+    }
+
+    void Edit() => IsEdit = true;
+
+    void QuickEdit() => IsQuickEdit = true;
+}

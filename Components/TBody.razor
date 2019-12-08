@@ -1,0 +1,34 @@
+﻿<tbody class="@(Body.IsTransfer ? "d-none" : "")">
+    <tr class="@(Body.IsEdit ? "d-none" : "") btn-primary active" style="font-weight: bold">
+        <td class="text-left">Total</td>
+        <td>@Body.Budget.Total()[0]</td>
+        <td>@Body.Budget.Total()[1]</td>
+    </tr>
+    <tr class="@(Body.IsEdit ? "d-none" : "") btn-primary active" style="font-weight: bold">
+        <td class="text-left">Balance</td>
+        <td>@Body.Budget.Balance()[0]</td>
+        <td>@Body.Budget.Balance()[1]</td>
+    </tr>
+    @for (int i = 0; i < 2; i++)
+    {
+        <tr class="@(Body.IsEdit ? "d-none" : "") btn-@(i == 0 ? "success" : "danger") active" style="font-weight: bold">
+            <td class="text-left">Income</td>
+            <td>@Body.Budget.Categories()[i].Sum(c => c.Sum(t => t.Previous))</td>
+            <td>@Body.Budget.Categories()[i].Sum(c => c.Sum(t => t.Current))</td>
+        </tr>
+        @foreach (var category in Body.Budget.Categories()[i])
+        {
+            <tr class="@(Body.IsEdit ? "d-none" : "") btn-@(i == 0 ? "success" : "danger")" style="font-weight: bold">
+                <td class="text-left">@category.Key</td>
+                <td>@(category.Sum(e => e.Previous))</td>
+                <td>@(category.Sum(e => e.Current))</td>
+            </tr>
+            @foreach (var transaction in category)
+            {
+                <CascadingValue Value="this"><TR Transaction="transaction" /></CascadingValue>
+            }
+        }
+    }
+</tbody>
+
+@code { [CascadingParameter] Body Body { get; set; } }

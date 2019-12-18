@@ -42,7 +42,7 @@
     public bool IsTransfer { get; set; } = false;
     string transfer;
 
-    protected override void OnInitialized() => Budget = new Transactions(localStorageService, "budget");
+    protected override void OnInitialized() => Budget = service.GetItem<Transactions>("budget") is null ? new Transactions() : service.GetItem<Transactions>("budget");
     
     void Cancel()
     {
@@ -55,7 +55,7 @@
     void Save()
     {
         Budget = IsTransfer ? Budget.Import(transfer) : Budget;
-        Budget.Save(localStorageService, "budget");
+        service.SetItem("budget", Budget);
         Cancel();
     }
     

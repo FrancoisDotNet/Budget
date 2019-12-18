@@ -1,28 +1,15 @@
-using Blazored.LocalStorage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace Budget.Components
+namespace Budget.Models
 {    
     public class Transactions
     {
         public List<Transaction> List { get; set; }
 
         public Transactions() => List = new List<Transaction>();
-
-        public Transactions(ISyncLocalStorageService service, string key)
-        {
-            Transactions exist = service.GetItem<Transactions>(key);
-            List = exist is null ? new Transactions().List : exist.List;
-        }
-
-        public void Save(ISyncLocalStorageService service, string key)
-        {
-            List.RemoveAll(t => t.Category == "");
-            service.SetItem(key, this);
-        }
 
         public Transactions Import(string csv)
         {

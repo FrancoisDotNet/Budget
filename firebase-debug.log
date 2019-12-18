@@ -1,0 +1,64 @@
+[debug] [2019-12-18T12:51:08.830Z] ----------------------------------------------------------------------
+[debug] [2019-12-18T12:51:08.836Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\franc\Downloads\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-12-18T12:51:08.836Z] CLI Version:   7.8.1
+[debug] [2019-12-18T12:51:08.836Z] Platform:      win32
+[debug] [2019-12-18T12:51:08.836Z] Node Version:  v13.3.0
+[debug] [2019-12-18T12:51:08.865Z] Time:          Wed Dec 18 2019 13:51:08 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2019-12-18T12:51:08.865Z] ----------------------------------------------------------------------
+[debug] [2019-12-18T12:51:08.865Z] 
+[debug] [2019-12-18T12:51:08.903Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-18T12:51:08.904Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\franc\OneDrive\Repos\Budget
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-12-18T12:51:21.591Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-12-18T12:51:21.593Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-12-18T12:51:21.970Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-18T12:51:22.007Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2019-12-18T12:51:22.786Z] <<< HTTP RESPONSE 200
+[info] i  Using project budgetdash (BudgetDash)
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2019-12-18T13:28:38.665Z] ----------------------------------------------------------------------
+[debug] [2019-12-18T13:28:38.668Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-12-18T13:28:38.668Z] CLI Version:   7.10.0
+[debug] [2019-12-18T13:28:38.668Z] Platform:      win32
+[debug] [2019-12-18T13:28:38.669Z] Node Version:  v13.3.0
+[debug] [2019-12-18T13:28:38.670Z] Time:          Wed Dec 18 2019 14:28:38 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2019-12-18T13:28:38.670Z] ----------------------------------------------------------------------
+[debug] [2019-12-18T13:28:38.670Z] 
+[debug] [2019-12-18T13:28:38.681Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-18T13:28:38.682Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\franc\OneDrive\Repos\Budget
+

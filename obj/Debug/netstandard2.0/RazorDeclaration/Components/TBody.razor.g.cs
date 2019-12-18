@@ -23,6 +23,11 @@ using System.Globalization;
 
 #line default
 #line hidden
+#line 3 "C:\Users\franc\OneDrive\Repos\Budget\_imports.razor"
+using Budget.Models;
+
+#line default
+#line hidden
     public partial class TBody : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -35,7 +40,7 @@ using System.Globalization;
 
 #line default
 #line hidden
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ISyncLocalStorageService localStorageService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ISyncLocalStorageService service { get; set; }
     }
 }
 #pragma warning restore 1591

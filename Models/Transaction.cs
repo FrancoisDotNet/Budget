@@ -1,12 +1,12 @@
-﻿namespace Budget.Components
+﻿namespace Budget.Models
 {
     public class Transaction
     {
-        public bool IsIncome { get; set; }
+        public bool IsIncome { get; set; } // Income or Expense
         public string Category { get; set; }
         public string Title { get; set; }
-        public float Previous { get; set; }
-        public float Current { get; set; }
+        public float Previous { get; set; } // Previous month amount
+        public float Current { get; set; } // Current month amount
         public bool IsDone { get; set; }
 
         public Transaction()

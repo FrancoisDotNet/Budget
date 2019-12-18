@@ -19,6 +19,11 @@ using System.Globalization;
 
 #line default
 #line hidden
+#line 3 "C:\Users\franc\OneDrive\Repos\Budget\_imports.razor"
+using Budget.Models;
+
+#line default
+#line hidden
     public partial class TBody : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -216,7 +221,7 @@ using System.Globalization;
 #line hidden
             , 59, (__builder2) => {
                 __builder2.OpenComponent<Budget.Components.TR>(60);
-                __builder2.AddAttribute(61, "Transaction", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Budget.Components.Transaction>(
+                __builder2.AddAttribute(61, "Transaction", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Budget.Models.Transaction>(
 #line 28 "C:\Users\franc\OneDrive\Repos\Budget\Components\TBody.razor"
                                                               transaction
 
@@ -252,7 +257,7 @@ using System.Globalization;
 
 #line default
 #line hidden
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ISyncLocalStorageService localStorageService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ISyncLocalStorageService service { get; set; }
     }
 }
 namespace __Blazor.Budget.Components.TBody

@@ -6,4 +6,4 @@ It shows what you can with a miminal amout of code.
 
 ## A really usable App
 You can manage your personal budget with this App.
-The App is hosted by free Google Firebase service
+The App is hosted by free Google Firebase service.

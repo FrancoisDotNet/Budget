@@ -36,7 +36,7 @@
     protected override void OnParametersSet()
     {
         transaction = Transaction;
-        style = Transaction.IsDone ? "warning" : "outline-warning";
+        style = Transaction.IsDone ? "outline-warning" : "warning";
         active = "";
     }
 
@@ -48,7 +48,7 @@
 
     void Done()
     {
-        style = style == "info" ? "outline-info" : "info";
+        style = style == "warning" ? "outline-warning" : "warning";
         Transaction.IsDone = !Transaction.IsDone;
     }
 

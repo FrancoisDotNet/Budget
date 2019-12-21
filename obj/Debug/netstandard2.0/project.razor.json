@@ -9,135 +9,7 @@
     "TagHelpers": [
       {
         "Kind": "Components.Component",
-        "Name": "Budget.Components.TBody",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "TBody",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Components.TBody"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "Budget.Components.TBody",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Budget.Components.TBody",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Components.TBody",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "Budget.Components.TR",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "TR",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Transaction",
-            "TypeName": "Budget.Components.Transaction",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Transaction"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Components.TR"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "Budget.Components.TR",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Budget.Components.TR",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Transaction",
-            "TypeName": "Budget.Components.Transaction",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Transaction"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Components.TR",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "Budget.Components.Body",
+        "Name": "Budget.Body",
         "AssemblyName": "Budget",
         "Documentation": null,
         "TagOutputHint": null,
@@ -156,19 +28,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Components.Body"
+          "Common.TypeName": "Budget.Body"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "Budget.Components.Body",
+        "Name": "Budget.Body",
         "AssemblyName": "Budget",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Budget.Components.Body",
+            "TagName": "Budget.Body",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -180,56 +52,7 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget.Components.Body",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "Budget._imports",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "_imports",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget._imports"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "Budget._imports",
-        "AssemblyName": "Budget",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Budget._imports",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Budget._imports",
+          "Common.TypeName": "Budget.Body",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16276,11 +16099,6 @@
   "RootNamespace": "Budget",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Components\\Body.razor",
-      "TargetPath": "Components\\Body.razor",
-      "FileKind": "component"
-    },
-    {
       "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Components\\TBody.razor",
       "TargetPath": "Components\\TBody.razor",
       "FileKind": "component"
@@ -16288,6 +16106,11 @@
     {
       "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\_imports.razor",
       "TargetPath": "_imports.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\franc\\OneDrive\\Repos\\Budget\\Body.razor",
+      "TargetPath": "Body.razor",
       "FileKind": "component"
     },
     {

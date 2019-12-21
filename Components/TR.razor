@@ -4,22 +4,22 @@
     </td>
     <td class=" @(Body.IsEdit ? "" : "d-none")">
         <div class="input-group">
-        <input type="text" class="form-control bg-transparent" @bind="transaction.Title" required placeholder="Title"/>
         <input type="text" class="form-control bg-transparent" @bind="transaction.Category" required placeholder="Category"/>
+        <input type="text" class="form-control bg-transparent" @bind="transaction.Title" required placeholder="Title"/>
         </div>
         <div class="btn-group d-flex" style="margin-top:12px">
             <button @onclick="Delete" class="btn btn-outline-danger oi oi-trash @active" style="line-height:inherit; position:unset" />           
             <button @onclick="IsIncome" class="btn btn-outline-success oi oi-thumb-up @(transaction.IsIncome ? "active" : "")" style="line-height:inherit; position:unset"/>
             <button @onclick="IsIncome" class="btn btn-outline-danger oi oi-thumb-down @(transaction.IsIncome ? "" : "active")" style="line-height:inherit; position:unset"/>    
-            <button @onclick="Done" class="btn btn-@style oi oi-media-record" style="line-height:inherit; position:unset" />
+            <button @onclick="Done" class="btn btn-@style oi oi-flag" style="line-height:inherit; position:unset" />
         </div>
     </td>
     <td class="@(Body.IsEdit ? "d-none" : "")">
-        <span class="@(Body.IsQuickEdit ? "d-none" : "")">@Transaction.Previous</span>
+        <span class="@(Body.IsQuickEdit ? "d-none" : "")">@Transaction.Previous.ToString("C")</span>
         <input type="number" step="any" class="form-control bg-transparent @(Body.IsQuickEdit ? "" : "d-none")" style="padding-right:0px;background-image:none" @bind="transaction.Previous" required />
     </td>
     <td class="@(Body.IsEdit ? "d-none" : "")">
-        <span class="@(Body.IsQuickEdit ? "d-none" : "")">@Transaction.Current</span>
+        <span class="@(Body.IsQuickEdit ? "d-none" : "")">@Transaction.Current.ToString("C")</span>
         <input type="number" step="any" class="form-control bg-transparent @(Body.IsQuickEdit ? "" : "d-none")" style="padding-right:0px;background-image:none" @bind="transaction.Current" required />
     </td>
 </tr>
@@ -36,7 +36,7 @@
     protected override void OnParametersSet()
     {
         transaction = Transaction;
-        style = Transaction.IsDone ? "info" : "outline-info";
+        style = Transaction.IsDone ? "warning" : "outline-warning";
         active = "";
     }
 

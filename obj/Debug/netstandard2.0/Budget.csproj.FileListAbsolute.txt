@@ -118,7 +118,7 @@ C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\C
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\Components\TR.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\Components\TBody.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\Components\TR.razor.g.cs
-C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\Components\Body.razor.g.cs
-C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\Components\Body.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\_imports.razor.g.cs
 C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\_imports.razor.g.cs
+C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\RazorDeclaration\Body.razor.g.cs
+C:\Users\franc\OneDrive\Repos\Budget\obj\Debug\netstandard2.0\Razor\Body.razor.g.cs

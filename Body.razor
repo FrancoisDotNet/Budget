@@ -20,10 +20,10 @@
                 <button @onclick="Transfer" class="btn btn-secondary oi oi-transfer"/>
             </th>
             <th scope="col" class="@(IsEdit ? "d-none" : "")" style="width:33.33%">
-                @CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.AddMonths(-1).ToString("MMM")) (€)
+                @CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.AddMonths(-1).ToString("MMM"))
             </th>
             <th scope="col" class="@(IsEdit ? "d-none" : "")" style="width:33.33%">
-                @CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMM")) (€)
+                @CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMM"))
             </th>
         </tr>
     </thead>

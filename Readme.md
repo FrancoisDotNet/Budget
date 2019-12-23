@@ -3,7 +3,7 @@
 ## A simple Blazor WebAssembly App
 The Budget App is a Blazor WebAssembly Sample.
 
-It shows what you can with a miminal amout of code.
+It shows what you can with a miminal amount of code.
 
 ## A really usable App
 You can manage your personal budget with this App.

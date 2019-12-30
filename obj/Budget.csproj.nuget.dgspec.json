@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\meyerf\\Downloads\\dev\\repos\\Budget\\Budget.csproj": {}
+    "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj": {}
   },
   "projects": {
-    "c:\\Users\\meyerf\\Downloads\\dev\\repos\\Budget\\Budget.csproj": {
+    "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\meyerf\\Downloads\\dev\\repos\\Budget\\Budget.csproj",
+        "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj",
         "projectName": "Budget",
-        "projectPath": "c:\\Users\\meyerf\\Downloads\\dev\\repos\\Budget\\Budget.csproj",
-        "packagesPath": "C:\\Users\\meyerf\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\meyerf\\Downloads\\dev\\repos\\Budget\\obj\\",
+        "projectPath": "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget.csproj",
+        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\meyerf\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +71,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-<<<<<<< HEAD
           "downloadDependencies": [
             {
               "name": "NETStandard.Library.Ref",
@@ -82,9 +83,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Users\\meyerf\\Downloads\\dev\\dotnet\\sdk\\3.1.100-preview3-014645\\RuntimeIdentifierGraph.json"
->>>>>>> 806b58afa15ce6b7400905aca3a75790b6e2b441
         }
       }
     }

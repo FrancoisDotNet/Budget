@@ -6,8 +6,7 @@
     <link href="css/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <script src="_framework/blazor.webassembly.js"></script>
-    <script src="/ServiceWorkerRegister.js"></script>
-    <link href="manifest.json" rel="manifest"/>
+    <link href="/manifest.json" rel="manifest"/>
 </head>
 <body class="bg-dark">
     <div class="container" style="padding-top:15px">
@@ -19,5 +18,15 @@
             <div class="spinner-grow"></div>
         </div>
     </div>
+<script src="/ServiceWorkerRegister.js"></script>
+<script>
+        if ('serviceWorker' in navigator) {
+            console.log('Registering service worker now');
+            navigator.serviceWorker.register('./serviceworker.js')
+                .then(function () {
+                    console.log('Service Worker Registered');
+                });
+        }
+    </script>
 </body>
 </html>

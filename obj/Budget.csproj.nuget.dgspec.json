@@ -38,6 +38,10 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "BlazorPWA.MSBuild": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "Blazored.LocalStorage": {
               "target": "Package",
               "version": "[2.1.1, )"

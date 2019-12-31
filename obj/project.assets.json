@@ -15,6 +15,12 @@
           "lib/netstandard2.0/Blazored.LocalStorage.dll": {}
         }
       },
+      "BlazorPWA.MSBuild/1.0.2": {
+        "type": "package",
+        "build": {
+          "build/BlazorPWA.MSBuild.targets": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/3.1.0": {
         "type": "package",
         "dependencies": {
@@ -331,6 +337,35 @@
         "blazored.localstorage.2.1.1.nupkg.sha512",
         "blazored.localstorage.nuspec",
         "lib/netstandard2.0/Blazored.LocalStorage.dll"
+      ]
+    },
+    "BlazorPWA.MSBuild/1.0.2": {
+      "sha512": "GP2FvxAZ2X58B/k71SAO9z94O6bxHlWVQ5JsrUorXoA3PCjhSGLiZCFas7DIwVri9rCRQsI0hWsOiLzB+Pn6Og==",
+      "type": "package",
+      "path": "blazorpwa.msbuild/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazor.PWA.MSBuild-NuGet-Icon.png",
+        "LICENSE.txt",
+        "README.md",
+        "Templates/ServiceWorker/sw_fetch-none.template.js",
+        "Templates/ServiceWorker/sw_fetch-offline-first.template.js",
+        "Templates/ServiceWorker/sw_install.template.js",
+        "Templates/ServiceWorker/sw_register-beforeinstallprompt.template.js",
+        "Templates/ServiceWorker/sw_register-installable-banner.template.js",
+        "Templates/ServiceWorker/sw_register-installable-blazor.template.js",
+        "Templates/ServiceWorker/sw_register-update-alert.template.js",
+        "Templates/ServiceWorker/sw_register.template.js",
+        "Templates/default-icon-192x192.png",
+        "Templates/default-icon-512x512.png",
+        "blazorpwa.msbuild.1.0.2.nupkg.sha512",
+        "blazorpwa.msbuild.nuspec",
+        "build/BlazorPWA.MSBuild.Manifest.targets",
+        "build/BlazorPWA.MSBuild.ServiceWorker.targets",
+        "build/BlazorPWA.MSBuild.ServiceWorkerRegister.targets",
+        "build/BlazorPWA.MSBuild.targets",
+        "tasks/netstandard1.6/Blazor.PWA.MSBuild.Tasks.dll"
       ]
     },
     "Microsoft.AspNetCore.Authorization/3.1.0": {
@@ -1129,6 +1164,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "BlazorPWA.MSBuild >= 1.0.2",
       "Blazored.LocalStorage >= 2.1.1",
       "Microsoft.AspNetCore.Blazor >= 3.1.0-preview4.19579.2",
       "Microsoft.AspNetCore.Blazor.Build >= 3.1.0-preview4.19579.2",
@@ -1173,6 +1209,10 @@
     "frameworks": {
       "netstandard2.1": {
         "dependencies": {
+          "BlazorPWA.MSBuild": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "Blazored.LocalStorage": {
             "target": "Package",
             "version": "[2.1.1, )"

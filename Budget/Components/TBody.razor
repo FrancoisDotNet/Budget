@@ -12,7 +12,7 @@
     @for (int i = 0; i < 2; i++)
     {
         <tr class="@(Body.IsEdit ? "d-none" : "") btn-@(i == 0 ? "success" : "danger") active" style="font-weight: bold">
-            <td class="text-left">Income</td>
+            <td class="text-left">@(i == 0 ? "Income" : "Expense")</td>
             <td>@Body.Budget.Categories()[i].Sum(c => c.Sum(t => t.Previous)).ToString("C")</td>
             <td>@Body.Budget.Categories()[i].Sum(c => c.Sum(t => t.Current)).ToString("C")</td>
         </tr>

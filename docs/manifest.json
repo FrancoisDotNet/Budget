@@ -1,7 +1,7 @@
 {
   "short_name": "B",
   "name": "Budget",
-  "start_url": "/Budget/",
+  "start_url": "./",
   "display": "standalone",
   "icons": [
     {

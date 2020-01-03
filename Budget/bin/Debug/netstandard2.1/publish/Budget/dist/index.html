@@ -2,13 +2,16 @@
 <html>
 <head>
     <title>Budget</title>
-    <base href="./"/>
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="css/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
-    <link rel="manifest" href="manifest.json">
-    <link rel="script" href="ServiceWorker.js">
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <link href="./manifest.json" rel="manifest" >
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="./_framework/blazor.webassembly.js"></script> 
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./serviceworker.js');
+        }
+    </script>
 </head>
 <body class="bg-dark">
     <div class="container" style="padding-top:15px">
@@ -20,15 +23,5 @@
             <div class="spinner-grow"></div>
         </div>
     </div>
-    <script src="./_framework/blazor.webassembly.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            console.log('Registering service worker now');
-            navigator.serviceWorker.register('./serviceworker.js')
-                .then(function () {
-                    console.log('Service Worker Registered');
-                });
-        }
-    </script>
 </body>
 </html>

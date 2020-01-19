@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget\\Budget.csproj": {}
+    "C:\\Users\\franc\\Repos\\Budget\\budget\\Budget.csproj": {}
   },
   "projects": {
-    "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget\\Budget.csproj": {
+    "C:\\Users\\franc\\Repos\\Budget\\budget\\Budget.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget\\Budget.csproj",
+        "projectUniqueName": "C:\\Users\\franc\\Repos\\Budget\\budget\\Budget.csproj",
         "projectName": "Budget",
-        "projectPath": "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget\\Budget.csproj",
+        "projectPath": "C:\\Users\\franc\\Repos\\Budget\\budget\\Budget.csproj",
         "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\OneDrive\\Repos\\Budget\\Budget\\obj\\",
+        "outputPath": "C:\\Users\\franc\\Repos\\Budget\\budget\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
